@@ -300,6 +300,30 @@ a {
         (property_name)
         (plain_value)))))
 
+============================
+Many semicolons everywhere
+============================
+
+a {
+  b: c;;
+  d: e ; ;
+}
+
+---
+
+(stylesheet
+  (rule_set
+    (selectors
+      (tag_name))
+    (block
+      (declaration
+        (property_name)
+        (plain_value))
+      (declaration
+        (property_name)
+        (plain_value)))))
+
+
 =======================================
 Comments right after numbers
 =======================================
