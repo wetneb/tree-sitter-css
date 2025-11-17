@@ -263,6 +263,7 @@ Important declarations
 
 a {
   b: c !important;
+  e: f ! important;
 }
 
 ---
@@ -272,6 +273,10 @@ a {
     (selectors
       (tag_name))
     (block
+      (declaration
+        (property_name)
+        (plain_value)
+        (important))
       (declaration
         (property_name)
         (plain_value)
@@ -455,7 +460,7 @@ PostCSS
         (plain_value)
         (plain_value)
         (plain_value)
-        (important))))
+        (important_value))))
   (at_rule
     (at_keyword)
     (keyword_query)
@@ -475,7 +480,7 @@ PostCSS
               (integer_value
                 (unit)))
             (plain_value)
-            (important)
+            (important_value)
             (important_value))))))
   (at_rule
     (at_keyword)
